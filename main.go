@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"belajar-go/pkg/database"
+	"belajar-go/repository"
 )
 
 type Myfriends struct {
@@ -15,7 +16,9 @@ type Myfriends struct {
 
 func main() {
 
-	_ = database.InitPostgres()
+	conn := database.InitPostgres()
+
+	toRepo := repository.NewTodo(conn)
 
 	var user = Myfriends{}
 

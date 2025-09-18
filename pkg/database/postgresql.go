@@ -18,4 +18,3 @@ func InitPostgres() *gorm.DB {
 	return db
 
 }
-
