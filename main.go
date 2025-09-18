@@ -18,7 +18,7 @@ func main() {
 
 	conn := database.InitPostgres()
 
-	toRepo := repository.NewTodo(conn)
+	_ = repository.NewTodo(conn)
 
 	var user = Myfriends{}
 
